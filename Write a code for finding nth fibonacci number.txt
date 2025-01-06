@@ -1,0 +1,44 @@
+def fibonacci(n):
+# Base case: If n is 0 or 1, return n directly
+if n <= 1:
+return n
+# Initialize variables for the first two numbers in the sequence
+a, b = 0, 1
+# Compute the nth Fibonacci number
+for _ in range(2, n + 1):
+# Update a and b to be the sum of the previous two numbers
+a, b = b, a + b
+return b
+
+def fibonacci(n):
+# Base case: If n is 0 or 1, return n directly
+if n <= 1:
+return n
+# Recursive call to compute the (n-1)th Fibonacci number
+return fibonacci(n - 1) + fibonacci(n - 2)
+
+#!/bin/bash
+fib() {
+if [ $1 -le 0 ]; then
+echo "n must be positive"
+exit 1
+fi
+if [ $1 -eq 1 ]; then
+echo "$1"
+else
+fib $(($1-1)) $(( $1-2 ))
+fi
+}
+echo "$(fib 10)" # Output: 55
+
+def fibonacci(n):
+# Base case: If n is 0 or 1, return n directly
+if n <= 1:
+return n
+# Initialize variables for the first two numbers in the sequence
+a, b = 0, 1
+# Compute the nth Fibonacci number
+for _ in range(2, n + 1):
+# Update a and b to be the sum of the previous two numbers
+a, b = b, a + b
+return b
